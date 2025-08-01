@@ -17,22 +17,22 @@
 </div>
 
 <p align="center">
-  ![GitHub Snake](https://raw.githubusercontent.com/OfficialCodeVoyage/OfficialCodeVoyage/refs/heads/output/github-snake-dark.svg)
+  <img alt="GitHub Snake" src="https://raw.githubusercontent.com/OfficialCodeVoyage/OfficialCodeVoyage/refs/heads/output/github-snake-dark.svg" />
 </p>
 
 <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1rem;">
   <!-- Left: Metrics & Signals -->
   <div style="flex:1; min-width:300px; max-width:45%;">
     <h3>📊 Quick Signal Panel</h3>
-    <!-- Placeholder badges: swap <YOUR_HOST> with your metrics service or point to committed SVGs -->
     <p>
+      <!-- Replace <YOUR_HOST> with your metrics service or static snapshots path -->
       <img alt="GitHub summary badge" src="https://your-metrics-host.example.com/svg/github-summary" />
       <img alt="Latency badge" src="https://your-metrics-host.example.com/svg/latency?target=github.com" />
       <img alt="Error budget badge" src="https://your-metrics-host.example.com/svg/error-budget" />
       <img alt="Deploy health badge" src="https://your-metrics-host.example.com/svg/deploy-health" />
     </p>
     <p style="font-size:0.75rem; margin-top:4px;">
-      These are live signal placeholders. Replace <code>your-metrics-host.example.com</code> with your deployed metrics service or embed static snapshots via CI. Keep the SVG endpoints consistent with your internal instrumentation.
+      Live badge placeholders. Swap in your deployed metrics service domain or point to versioned SVGs committed via CI. Keep the endpoints consistent with your instrumentation.
     </p>
   </div>
 
@@ -66,6 +66,7 @@
   </div>
 </div>
 
+---
 
 ## 🧰 Signature Capabilities
 
@@ -85,7 +86,25 @@
 - Scaling distributed stateful services with controlled technical debt decay curves.  
 <!-- FOCUS-END -->
 
+*This block is intended to be auto-refreshed by your automation pipeline. Keep the markers if you automate updates.*
 
+---
 
+## 🧩 Bootstrap / Usage Snippet
 
+```bash
+# Clone profile README repo (already exists)
+git clone git@github.com:blurphanatic/blurphanatic.git
+cd blurphanatic
 
+# Optional: snapshot live SVGs for versioned embedding
+mkdir -p metrics
+curl -fsSL "https://your-metrics-host.example.com/svg/github-summary" -o metrics/github-summary.svg
+curl -fsSL "https://your-metrics-host.example.com/svg/latency?target=github.com" -o metrics/latency.svg
+curl -fsSL "https://your-metrics-host.example.com/svg/error-budget" -o metrics/error-budget.svg
+curl -fsSL "https://your-metrics-host.example.com/svg/deploy-health" -o metrics/deploy-health.svg
+
+# Commit if using static snapshots
+git add metrics/
+git commit -m "Snapshot metrics"
+git push
