@@ -17,7 +17,6 @@
 </div>
 
 <p align="center">
-  ![GitHub Snake](https://raw.githubusercontent.com/OfficialCodeVoyage/OfficialCodeVoyage/refs/heads/output/github-snake-dark.svg)
 </p>
 
 <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1rem;">
