@@ -1,13 +1,8 @@
----
-
-### 2. GitHub Action: `.github/workflows/github-metrics.yml`
-
-```yaml
 name: GitHub Metrics
 
 on:
   schedule:
-    - cron: "0 0 * * *"         # daily at midnight UTC
+    - cron: "0 0 * * *"  # daily at midnight UTC
   workflow_dispatch:
   push:
     branches:
@@ -29,12 +24,12 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Install prerequisites (for tooling if needed)
+      - name: Install prerequisites
         run: |
           sudo apt-get update -y
           sudo apt-get install -y jq
 
-      - name: Generate GitHub Metrics (official adaptation)
+      - name: Generate GitHub Metrics
         uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
@@ -61,19 +56,24 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
 
-      - name: Move generated SVGs into metrics/
-        run: |
-          mkdir -p metrics
-          # Lowlighter/metrics outputs into ./metrics by default if not overridden; adapt if different.
-          # Fallback: copy known outputs (these filenames are typical; adjust if your template differs)
-          cp github-metrics.svg metrics/github-metrics.svg 2>/dev/null || true
-          cp top-langs.svg metrics/top-langs.svg 2>/dev/null || true
+      - name: Ensure metrics directory exists
+        run: mkdir -p metrics
 
-      - name: Commit and push metrics to metrics branch
+      - name: Copy generated SVGs into metrics/
+        run: |
+          # Adjust filenames if your template outputs differently.
+          if [ -f "github-metrics.svg" ]; then
+            mv github-metrics.svg metrics/github-metrics.svg
+          fi
+          if [ -f "top-langs.svg" ]; then
+            mv top-langs.svg metrics/top-langs.svg
+          fi
+
+      - name: Commit & push updated metrics
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "📈 Update GitHub metrics [skip ci]"
-          branch: metrics
+          branch: main
           file_pattern: "metrics/**"
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
