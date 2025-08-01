@@ -1,6 +1,6 @@
 <!-- PERSONAL GITHUB PROFILE README for Mikey / blurphanatic -->
 
-<h1 align="center">Hey, I’m Michael “Mikey” Coletta 👋</h1>
+<h1 align="center">Hey, I’m Michael Coletta 👋</h1>
 
 <p align="center">
   CTO &amp; Head of Product operating at the intersection of deep systems engineering, product leverage, and strategic automation. I build, scale, and instrument complex platforms—turning ambiguity into high-throughput execution. Fluent between code, infra, data, and product feedback loops; products are composable systems with measurable outcomes.
