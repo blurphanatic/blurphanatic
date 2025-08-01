@@ -66,7 +66,6 @@
   </div>
 </div>
 
----
 
 ## 🧰 Signature Capabilities
 
@@ -86,25 +85,7 @@
 - Scaling distributed stateful services with controlled technical debt decay curves.  
 <!-- FOCUS-END -->
 
-*This block is intended to be auto-refreshed by your automation pipeline. Maintain the markers if you automate updates.*
 
----
 
-## 🧩 Bootstrap / Usage Snippet
 
-```bash
-# Clone profile README repo (already exists)
-git clone git@github.com:blurphanatic/blurphanatic.git
-cd blurphanatic
 
-# To snapshot live SVGs if you prefer versioned (optional):
-mkdir -p metrics
-curl -fsSL "https://your-metrics-host.example.com/svg/github-summary" -o metrics/github-summary.svg
-curl -fsSL "https://your-metrics-host.example.com/svg/latency?target=github.com" -o metrics/latency.svg
-curl -fsSL "https://your-metrics-host.example.com/svg/error-budget" -o metrics/error-budget.svg
-curl -fsSL "https://your-metrics-host.example.com/svg/deploy-health" -o metrics/deploy-health.svg
-
-# Commit updated static snapshots if using cached versioning
-git add metrics/
-git commit -m "Snapshot metrics"
-git push
