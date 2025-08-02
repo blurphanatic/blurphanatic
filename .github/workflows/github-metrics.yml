@@ -61,17 +61,21 @@ jobs:
 
       - name: Copy generated SVGs into metrics/
         run: |
+          set -eux
+          # Primary expected output location seen in logs
           SRC_DIR="/metrics_renders"
 
-          # Primary expected outputs from lowlighter/metrics
-          if [ -f "$SRC_DIR/github-metrics.svg" ]; then
-            cp "$SRC_DIR/github-metrics.svg" metrics/github-metrics.svg
-          fi
-          if [ -f "$SRC_DIR/top-langs.svg" ]; then
-            cp "$SRC_DIR/top-langs.svg" metrics/top-langs.svg
+          # Copy from metrics_renders if present
+          if [ -d "$SRC_DIR" ]; then
+            if [ -f "$SRC_DIR/github-metrics.svg" ]; then
+              cp "$SRC_DIR/github-metrics.svg" metrics/github-metrics.svg
+            fi
+            if [ -f "$SRC_DIR/top-langs.svg" ]; then
+              cp "$SRC_DIR/top-langs.svg" metrics/top-langs.svg
+            fi
           fi
 
-          # Fallback if outputs landed at repo root
+          # Fallback if output landed in repository root
           if [ -f "github-metrics.svg" ]; then
             mv github-metrics.svg metrics/github-metrics.svg
           fi
@@ -81,20 +85,49 @@ jobs:
 
       - name: Validate metrics SVGs presence
         run: |
-          echo "Checking for expected SVGs in metrics/..."
+          echo "Listing metrics directory contents:"
           ls -al metrics/
           if [ ! -f metrics/github-metrics.svg ]; then
-            echo "ERROR: metrics/github-metrics.svg missing in metrics/"; exit 1
+            echo "ERROR: metrics/github-metrics.svg is missing. Generation likely failed."; exit 1
           fi
           if [ ! -f metrics/top-langs.svg ]; then
-            echo "WARNING: metrics/top-langs.svg missing in metrics/ (continuing if optional)"
+            echo "WARNING: metrics/top-langs.svg is missing (optional)."
           fi
 
-      - name: Commit & push updated metrics
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "📈 Update GitHub metrics [skip ci]"
-          branch: main
-          file_pattern: "metrics/**"
-        env:
-          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
+      - name: Commit and push metrics with resilience
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Sync remote and rebase to avoid non-fast-forward
+          git fetch origin main
+          git checkout main
+          git pull --rebase=interactive --autostash origin main || true
+
+          # Only commit if there are changes under metrics/
+          if git diff --quiet metrics/; then
+            echo "No changes detected in metrics/; skipping commit."
+            exit 0
+          fi
+
+          git add metrics/
+          git commit -m "📈 Update GitHub metrics [skip ci]"
+
+          # Push with retries, fall back to force-with-lease on last attempt
+          for attempt in 1 2 3; do
+            if git push origin main; then
+              echo "Push successful."
+              exit 0
+            fi
+            echo "Push failed (attempt $attempt), fetching & rebasing then retrying..."
+            git fetch origin main
+            git rebase --autostash origin/main || {
+              echo "Rebase failed or conflict; aborting rebase."
+              git rebase --abort || true
+            }
+            sleep $((attempt * 2))
+          done
+
+          echo "Final push attempt with force-with-lease to avoid overwriting remote unexpectedly."
+          git push --force-with-lease origin main
