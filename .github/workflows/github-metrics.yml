@@ -61,12 +61,33 @@ jobs:
 
       - name: Copy generated SVGs into metrics/
         run: |
-          # Adjust filenames if your template outputs differently.
+          SRC_DIR="/metrics_renders"
+
+          # Primary expected outputs from lowlighter/metrics
+          if [ -f "$SRC_DIR/github-metrics.svg" ]; then
+            cp "$SRC_DIR/github-metrics.svg" metrics/github-metrics.svg
+          fi
+          if [ -f "$SRC_DIR/top-langs.svg" ]; then
+            cp "$SRC_DIR/top-langs.svg" metrics/top-langs.svg
+          fi
+
+          # Fallback if outputs landed at repo root
           if [ -f "github-metrics.svg" ]; then
             mv github-metrics.svg metrics/github-metrics.svg
           fi
           if [ -f "top-langs.svg" ]; then
             mv top-langs.svg metrics/top-langs.svg
+          fi
+
+      - name: Validate metrics SVGs presence
+        run: |
+          echo "Checking for expected SVGs in metrics/..."
+          ls -al metrics/
+          if [ ! -f metrics/github-metrics.svg ]; then
+            echo "ERROR: metrics/github-metrics.svg missing in metrics/"; exit 1
+          fi
+          if [ ! -f metrics/top-langs.svg ]; then
+            echo "WARNING: metrics/top-langs.svg missing in metrics/ (continuing if optional)"
           fi
 
       - name: Commit & push updated metrics
