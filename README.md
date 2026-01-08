@@ -18,7 +18,7 @@ Building cross-border supply chain tracking on Hedera DLT. Contributing to CEN T
 
 ## Background
 
-Computer Science and Spanish Linguistics from Illinois State. Started in Chicago, now London. Italian passport, American accent.
+Computer Science and Spanish Linguistics from Illinois State. Started in Chicago, now London.
 
 ## Repos
 
