@@ -1,65 +1,29 @@
-<!-- PERSONAL GITHUB PROFILE README for Mikey / blurphanatic -->
+# Michael Coletta
 
-<h1 align="center">Hey, I’m Michael Coletta 👋</h1>
+I build financial infrastructure. 20 years from CME trading systems to Bank of England CBDC architecture.
 
-<p align="center">
-  CTO &amp; Head of Product operating at the intersection of deep systems engineering, product leverage, and strategic automation. I build, scale, and instrument complex platforms—turning ambiguity into high-throughput execution. Fluent between code, infra, data, and product feedback loops; products are composable systems with measurable outcomes.
-</p>
+## What I Actually Do
 
-<p align="center">
-  <!-- Social / contact -->
-  <a href="https://www.linkedin.com/in/michael-coletta-4883974/" target="_blank" aria-label="LinkedIn">
-    <img width="24" alt="LinkedIn" src="https://raw.githubusercontent.com/CLorant/readme-social-icons/main/large/filled/linkedin.svg" />
-  </a>
-  <a href="https://github.com/blurphanatic" target="_blank" aria-label="GitHub">
-    <img width="24" alt="GitHub" src="https://raw.githubusercontent.com/CLorant/readme-social-icons/main/large/filled/github.svg" />
-  </a>
-</p>
+**Policy & Standards** - Co-authored the EU's MiCA crypto regulation as part of the European Commission DG FISMA Expert Group. Sat on ESMA's Financial Innovation Standing Committee. Currently contributing to CEN postal digitization standards for the Universal Postal Union.
 
-<!-- Skill icons -->
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=aws,azure,cpp,cmake,docker,git,github,js,linux,postgres,py,dotnet,unreal,pycharm" alt="Skills and tools" />
-  </a>
-</p>
+**Central Banks** - Advised the Bank of England on digital pound architecture. Before that, 10 years as London regulatory liaison for CME Group, working directly with the FCA and BoE on clearing technology compliance.
 
-<!-- Metrics placeholders -->
-<p align="center">
-  <!-- Replace these with real dynamic badges / cards; examples below are placeholders -->
-  <!-- GitHub stats card (can be generated with your own service or https://github.com/anuraghazra/github-readme-stats) -->
-  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=blurphanatic&show_icons=true&theme=radical&count_private=true)
+**Market Infrastructure** - Head of Digital Asset Innovation at London Stock Exchange Group, covering LCH clearing, FTSE Russell, Borsa Italiana, and Monte Titoli. Before that, Senior Architect at CME where I redesigned the margin calculation engine for a 10x performance gain.
 
-  <!-- Top languages -->
-  ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=blurphanatic&layout=compact&theme=radical)
+**Standards Bodies** - Technical Advisor at OASIS-Open. Chair of the UBL Commodities subcommittee. FIX Protocol representative for derivatives messaging. Founding member of the Global Blockchain Business Council's Post-Trade DLT group.
 
-  <!-- Custom signal panel placeholder -->
-  <!-- TODO: Replace with embed / image generation pipeline feeding your internal telemetry -->
-  ![Quick Signal Panel Placeholder](https://img.shields.io/badge/Signal-Panel--gray)
-</p>
+## Current Work
 
-## 🧠 About Me
+Building cross-border supply chain tracking on Hedera DLT. Contributing to CEN TC331 postal standards. Writing a lot of Python and TypeScript. Using Claude Code to build things faster than I ever have.
 
-CTO & Head of Product. I build, scale, and instrument high-leverage systems—aligning technical debt with velocity, and treating products as feedback-enabled composable platforms. My domain spans distributed architecture, observability, API/ML infrastructure, financial systems design, and strategic automation. I assume context, cut noise, and optimize for signal across both code and org design. Execution is structured flow; alignment is the vector.
+## Background
 
-## ✨ Fun Facts
+Computer Science and Spanish Linguistics from Illinois State. Started in Chicago, now London. Italian passport, American accent.
 
-- Bilingual / polyglot thinker—English & Spanish, fluent in system-level abstraction.  
-- London base with a global remit; travel and music are cognitive reset levers.  
-- Daily practice: flow optimization, communication as signal shaping, and applying the 7 Habits in execution.  
-- View technology as leverage; alignment determines direction and magnitude.  
+## Repos
 
-## 🧰 Signature Capabilities
+Most of my work is private or lives in enterprise orgs. The public stuff here is mostly tools I've built for myself - MCP servers, automation scripts, the occasional experiment.
 
-- **Systems & Product Synthesis:** From ambiguity to high-throughput execution; composable product feedback loops.  
-- **Observability & Instrumentation:** Metrics-first design, signal extraction, automated alerting aligned to business outcomes.  
-- **Financial & API Infrastructure:** Building resilient, audit-ready, latency-conscious systems for money and data flow.  
-- **Scaling Complex Platforms:** Strategic technical debt management, feature gating, rollout orchestration.  
-- **Communication as Code:** Treating org structure, docs, and feedback as first-class programmatic inputs to optimize leverage.
+---
 
-## 🚀 What I’m Working On / Focus Areas
-
-- Building internal platform observability layers that collapse signal-to-decision latency.  
-- Automating high-leverage product feedback loops linking user telemetry to discrete iteration outcomes.  
-- Financial system resilience: reconciliation, API throughput shaping, and drift detection.  
-- Org-level alignment tooling: surfaces misalignments before they cost cycles.  
-
+michael.coletta@gmail.com | London
