@@ -1,6 +1,6 @@
 # Michael Coletta
 
-I build financial infrastructure. 20 years from CME trading systems to Bank of England CBDC architecture.
+I build financial market infrastructure. 20 years from CME trading systems to Bank of England CBDC architecture.
 
 ## What I Actually Do
 
