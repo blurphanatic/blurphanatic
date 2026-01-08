@@ -1,26 +1,28 @@
 # Michael Coletta
 
-Building next-gen carbon markets and supply chain traceability. DLT geek who's spent 20 years in financial market infrastructure - the plumbing that moves trillions daily.
+I've spent 20 years in financial market infrastructure - the plumbing that moves trillions daily while everyone argues about whether Bitcoin is money. Now I'm trying to make carbon markets actually work, which means convincing people that spreadsheets and pinky promises aren't a verification system.
 
-## The Work
+## What I'm Doing
 
-**Now** - Developing data-driven carbon tracking systems on Hedera. If you can't measure it, you can't trade it, and current carbon markets are built on spreadsheets and trust. That needs to change.
+Building supply chain traceability and carbon tracking on Hedera DLT. Turns out "we promise this metal is sustainable" doesn't cut it anymore, and someone has to build the boring infrastructure that makes claims auditable. That someone is apparently me.
 
-**Policy + Tech** - I've sat on both sides. Co-authored EU crypto regulation (MiCA) at the European Commission. Technical advisor to Bank of England on CBDC architecture. You can't build things regulators will kill, and you can't write policy without knowing what's actually possible.
+## How I Got Here
 
-**FMI Background** - Head of Digital Asset Innovation at LSEG (the London Stock Exchange, LCH clearing, FTSE Russell). Before that, 10 years at CME Group building derivatives infrastructure. I know how markets actually work.
+Mass accumulation of niche expertise, mostly. 10 years at CME Group building derivatives systems. Then LSEG, where I ran digital asset innovation across the London Stock Exchange, LCH clearing, and FTSE Russell - which sounds impressive until you realize "innovation" in financial infrastructure means convincing committees that change won't break everything.
 
-**Standards** - Technical Advisor at OASIS-Open. Chair of UBL Commodities. Currently contributing to CEN postal digitization standards. Standards are boring until you realize they're how the world agrees on anything.
+Somehow ended up co-authoring EU crypto regulation (MiCA) and advising the Bank of England on their digital pound. I'm not entirely sure how that happened, but I've learned that if you stay in a room long enough and occasionally say something useful, people assume you're an expert.
 
-## The Approach
+## On AI
 
-I treat AI like I treat any tool - it's not magic, it's leverage. Garbage in, garbage out. The output is only as good as your prompts, your training data, and your ability to know when it's bullshitting you.
+I use it constantly. I'm not precious about it. It's a tool - like a very fast intern who's read everything but understood nothing. The trick is knowing when it's confidently wrong, which is often. Garbage in, garbage out. Always has been.
 
-Most of my repos are private or live in enterprise orgs. What's public here is home lab experiments - MCP servers, automation scripts, things I build because I want them to exist.
+## The Repos
+
+Most of my work lives in private enterprise repos or behind NDAs. What's here is home lab stuff - MCP servers, automation experiments, things I built at 2am because I wanted them to exist and nobody else was going to do it.
 
 ## Background
 
-CS and Spanish Linguistics from Illinois State. Chicago to London. I build things.
+Computer Science and Spanish Linguistics from Illinois State - a combination that's never once been useful in the way my career counselor promised. Chicago kid, now London. Still can't find good Mexican food.
 
 ---
 
