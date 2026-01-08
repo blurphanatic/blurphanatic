@@ -1,29 +1,27 @@
 # Michael Coletta
 
-I build financial market infrastructure. 20 years from CME trading systems to Bank of England CBDC architecture.
+Building next-gen carbon markets and supply chain traceability. DLT geek who's spent 20 years in financial market infrastructure - the plumbing that moves trillions daily.
 
-## What I Actually Do
+## The Work
 
-**Policy & Standards** - Co-authored the EU's MiCA crypto regulation as part of the European Commission DG FISMA Expert Group. Sat on ESMA's Financial Innovation Standing Committee. Currently contributing to CEN postal digitization standards for the Universal Postal Union.
+**Now** - Developing data-driven carbon tracking systems on Hedera. If you can't measure it, you can't trade it, and current carbon markets are built on spreadsheets and trust. That needs to change.
 
-**Central Banks** - Advised the Bank of England on digital pound architecture. Before that, 10 years as London regulatory liaison for CME Group, working directly with the FCA and BoE on clearing technology compliance.
+**Policy + Tech** - I've sat on both sides. Co-authored EU crypto regulation (MiCA) at the European Commission. Technical advisor to Bank of England on CBDC architecture. You can't build things regulators will kill, and you can't write policy without knowing what's actually possible.
 
-**Market Infrastructure** - Head of Digital Asset Innovation at London Stock Exchange Group, covering LCH clearing, FTSE Russell, Borsa Italiana, and Monte Titoli. Before that, Senior Architect at CME where I redesigned the margin calculation engine for a 10x performance gain.
+**FMI Background** - Head of Digital Asset Innovation at LSEG (the London Stock Exchange, LCH clearing, FTSE Russell). Before that, 10 years at CME Group building derivatives infrastructure. I know how markets actually work.
 
-**Standards Bodies** - Technical Advisor at OASIS-Open. Chair of the UBL Commodities subcommittee. FIX Protocol representative for derivatives messaging. Founding member of the Global Blockchain Business Council's Post-Trade DLT group.
+**Standards** - Technical Advisor at OASIS-Open. Chair of UBL Commodities. Currently contributing to CEN postal digitization standards. Standards are boring until you realize they're how the world agrees on anything.
 
-## Current Work
+## The Approach
 
-Building cross-border supply chain tracking on Hedera DLT. Contributing to CEN TC331 postal standards. Writing a lot of Python and TypeScript. Using Claude Code to build things faster than I ever have.
+I treat AI like I treat any tool - it's not magic, it's leverage. Garbage in, garbage out. The output is only as good as your prompts, your training data, and your ability to know when it's bullshitting you.
+
+Most of my repos are private or live in enterprise orgs. What's public here is home lab experiments - MCP servers, automation scripts, things I build because I want them to exist.
 
 ## Background
 
-Computer Science and Spanish Linguistics from Illinois State. Started in Chicago, now London.
-
-## Repos
-
-Most of my work is private or lives in enterprise orgs. The public stuff here is mostly tools I've built for myself - MCP servers, automation scripts, the occasional experiment.
+CS and Spanish Linguistics from Illinois State. Chicago to London. I build things.
 
 ---
 
-michael.coletta@gmail.com | London
+michael.coletta@gmail.com
